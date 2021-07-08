@@ -1,0 +1,236 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 20%;
+  padding: 5px;
+}
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<br>
+<br>
+<br>
+
+<div>
+  <h1>About Us</h1>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/media/aboutus/team41.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Management and Bussiness</p>
+        <p>jane@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/media/aboutus/team5.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>UI and UX Designer of Website</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="/media/aboutus/team6.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Front End Developer and Software Engineer</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div>
+    <h1>About our Team</h1>
+    <p> 
+      Our Page started its activity in 1390 in Tehran province.We start this bussiness with my brother.but now we are 50 people in this company.At first we have only one website but now you can find us on other platforms.Our goal is to makes people close to each other and Nowadays it is possible for you to see whats happend around the world. 
+    </p>
+
+    <p>We hope that one day become like famouse and prominent Social media like Face book and Twitter</p>
+  </div>
+
+
+
+
+
+
+<h2>Our Customers</h2>
+  <p>We are honor that we have Cooperation with these big Companies.</p>
+<div class="row">
+  <div class="column">
+    <img src="/media/news/Instagram2.png" alt="Instagram" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/media/news/Pinterest2.png" alt="Pinterest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/media/news/Twitter2.png" alt="Twitter" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/media/news/Linkdin2.png" alt="linkedin" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/media/news/Facebook.png" alt="Facebook" style="width:100%">
+  </div>
+</div>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="googleMap" style="width:100%;height:400px;"></div>
+  
+  <script>
+  function myMap() {
+  var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+  };
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  }
+  </script>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+    
+{% endblock content %}
